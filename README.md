@@ -7,13 +7,10 @@ The Microprocessor-Based Temperature Controlled Fan System is a project designed
 Hardware
 1.	Arduino Microcontroller
 2.	LM35 Temperature sensor
-3.	16x2 LCD Display
-4.	10k ohm potentiometer
-5.	220-ohm resistor
-6.	PCB
-7.	Wires
-8.	power supply block
-9.	Fan Module
+3.	220-ohm resistor
+4.	PCB
+5.	Wires
+6.	Fan Module
    
 Software
 1.	Arduino IDE
@@ -25,10 +22,6 @@ The working mechanism of a microcontroller-based temperature-controlled fan syst
 Hardware Setup:
 ●	Connect the LM35 temperature sensor to one of the analog pins of the Arduino.
 ●	Connect the fan to a digital pin of the Arduino that supports PWM (Pulse Width Modulation) for speed control.
-●	Connect an LCD display module to the Arduino for real-time temperature display.
-
-Initialization:
-●	Initialize the required libraries for the LCD display and PWM control.
 
 Main Loop:
 ●	Inside the Arduino's main loop, perform the following steps repeatedly:
@@ -41,21 +34,12 @@ Control Algorithm:
 ●	Compare the measured temperature with the desired target temperature.
 ●	Calculate the temperature error (difference between desired and measured temperatures).
 
-Fan Speed Adjustment:
-●	Use a control algorithm, such as a proportional controller or PID controller, to determine the required fan speed adjustment based on the temperature error.
-●	Convert the control output to a PWM duty cycle value that corresponds to the desired fan speed. Higher PWM duty cycle values result in faster fan speeds.
-
-LCD Display:
-●	Send the measured temperature value and the fan speed (PWM duty cycle) to the LCD display module for real-time display.
-
 Fan Control:
 ●	Set the PWM duty cycle of the fan control pin based on the calculated value from the control algorithm. This adjusts the fan speed accordingly
 
 Delay and Loop Iteration:
 ●	Introduce a delay to control the frequency of temperature readings and fan speed adjustments.
-●	Repeat the loop iteration to continuously monitor the temperature, adjust the fan speed, and update the LCD display.
-
-This process continues in a loop, allowing the microcontroller (Arduino) to constantly monitor the temperature using the LM35 sensor, calculate the required fan speed adjustment, and display the temperature and fan speed on the LCD display in real-time. As the ambient temperature changes, the system automatically adjusts the fan speed to maintain the desired target temperature, offering efficient temperature control and user-friendly monitoring.
+●	Repeat the loop iteration to continuously monitor the temperature.
 
 
 ## Diagram
